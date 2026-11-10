@@ -1,0 +1,13 @@
+AutoDM
+Copyright (c) 2026 the AutoDM contributors
+
+This project is a fork of OpenReply (https://github.com/diwenne/openreply),
+Copyright (c) 2026 Diwen Huang, which was initially forked from
+instagram-comment-to-dm (https://github.com/im-anishraj/instagram-comment-to-dm),
+Copyright (c) 2026 Anish Raj. Both are released under the MIT License; the
+original copyright notices are retained in LICENSE.
+
+Changes in this fork include: email and password sign-in, an optional
+env-configured owner login, an MCP connector for managing automations from
+AI assistants, extra campaign builder options, a cron image, and Railway
+deployment documentation.

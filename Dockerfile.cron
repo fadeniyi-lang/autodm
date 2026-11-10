@@ -1,0 +1,12 @@
+# AutoDM cron — a tiny scheduler image that calls the web service's
+# /api/cron routes on a timer (token refresh, attaching campaigns to newly
+# published reels, follower snapshots). It needs no app code, only
+# scripts/cron.sh, a POSIX shell and GNU wget.
+#
+# Required env: CRON_BASE_URL (the web service's URL, e.g.
+# https://autodm.example.com) and CRON_SECRET (same value as on web).
+FROM alpine:3.20
+RUN apk add --no-cache wget ca-certificates tzdata
+WORKDIR /app
+COPY scripts/cron.sh ./scripts/cron.sh
+CMD ["sh", "scripts/cron.sh"]
